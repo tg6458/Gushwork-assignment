@@ -483,6 +483,15 @@
     gap: 12px;
   }
 
+  /* Hide desktop links in sticky header, show hamburger */
+  .sticky-header__right {
+    display: none;
+  }
+
+  .sticky-header__hamburger {
+    display: flex;
+  }
+
   /* Navbar: hamburger + slide-out */
   .navbar__hamburger {
     display: flex;

@@ -75,6 +75,10 @@
   gap: 28px;
 }
 
+.sticky-header__hamburger {
+  display: none;
+}
+
 /* ---- Navbar ---- */
 .navbar {
   background: var(--white);

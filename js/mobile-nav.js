@@ -4,25 +4,40 @@
  */
 function initMobileNav() {
   const hamburger = document.getElementById('hamburger');
+  const stickyHamburger = document.getElementById('stickyHamburger');
   const navLinks = document.getElementById('navLinks');
-  if (!hamburger || !navLinks) return;
+  if (!navLinks) return;
 
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
+  function toggleNav(btn) {
+    btn.classList.toggle('active');
     navLinks.classList.toggle('active');
-  });
+  }
+
+  function closeNav() {
+    if (hamburger) hamburger.classList.remove('active');
+    if (stickyHamburger) stickyHamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+  }
+
+  if (hamburger) {
+    hamburger.addEventListener('click', () => toggleNav(hamburger));
+  }
+
+  if (stickyHamburger) {
+    stickyHamburger.addEventListener('click', () => toggleNav(stickyHamburger));
+  }
 
   document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-      hamburger.classList.remove('active');
-      navLinks.classList.remove('active');
+    const clickedHamburger = (hamburger && hamburger.contains(e.target)) ||
+                             (stickyHamburger && stickyHamburger.contains(e.target));
+    if (!clickedHamburger && !navLinks.contains(e.target)) {
+      closeNav();
     }
   });
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      hamburger.classList.remove('active');
-      navLinks.classList.remove('active');
+      closeNav();
     }
   });
 }
