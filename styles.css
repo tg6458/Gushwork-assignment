@@ -129,6 +129,43 @@ ul {
 }
 
 /* ============================================
+   STICKY HEADER
+   Fixed top, slides down when scrolling past first fold,
+   slides up when scrolling back up
+   ============================================ */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transform: translateY(-100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sticky-header--visible {
+  transform: translateY(0);
+}
+
+.sticky-header__inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 12px var(--px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sticky-header__right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* ============================================
    NAVBAR
    ============================================ */
 .navbar {
@@ -2781,11 +2818,11 @@ ul {
 }
 
 .modal {
-  background: var(--white);
-  border-radius: 14px;
-  padding: 32px 30px 30px;
+  background: #FAFBFC;
+  border-radius: 16px;
+  padding: 36px 32px 32px;
   width: 100%;
-  max-width: 440px;
+  max-width: 460px;
   position: relative;
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
   transform: translateY(20px) scale(0.97);
@@ -2798,37 +2835,35 @@ ul {
 
 .modal__close {
   position: absolute;
-  top: 30px;
-  right: 28px;
+  top: 36px;
+  right: 32px;
   width: 24px;
   height: 24px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gray-300);
-  transition: all 0.2s;
+  color: var(--gray-400);
+  transition: color 0.2s;
 }
 
 .modal__close:hover {
-  background: var(--gray-100);
   color: var(--dark);
 }
 
 .modal__title {
   font-family: var(--font-heading);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--dark);
   margin-bottom: 24px;
-  padding-right: 28px;
-  line-height: 1.4;
+  padding-right: 36px;
+  line-height: 1.35;
 }
 
 .modal__form {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
 }
 
 .modal__field {
@@ -2838,7 +2873,7 @@ ul {
 }
 
 .modal__label {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--dark);
 }
@@ -2846,7 +2881,7 @@ ul {
 .modal__input {
   padding: 14px 16px;
   border: 1px solid var(--gray-200);
-  border-radius: 10px;
+  border-radius: 8px;
   font-family: var(--font-body);
   font-size: 14px;
   color: var(--dark);
@@ -2869,13 +2904,19 @@ ul {
 .modal__phone {
   display: flex;
   align-items: center;
+  background: var(--white);
   border: 1px solid var(--gray-200);
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.modal__phone:focus-within {
+  border-color: var(--navy);
 }
 
 .modal__phone-prefix {
-  padding: 14px 12px 14px 16px;
+  padding: 14px 10px 14px 16px;
   font-size: 14px;
   font-weight: 500;
   color: var(--dark-500);
@@ -2888,7 +2929,7 @@ ul {
 .modal__input--phone {
   border: none;
   border-radius: 0;
-  padding-left: 14px;
+  padding-left: 12px;
 }
 
 .modal__input--phone:focus {
@@ -2898,7 +2939,7 @@ ul {
 /* Actions row */
 .modal__actions {
   display: flex;
-  margin-top: 8px;
+  margin-top: 12px;
 }
 
 .modal__actions--right {
@@ -2908,8 +2949,8 @@ ul {
 /* Modal navy button - rounded */
 .modal__actions .btn--navy {
   border-radius: 10px;
-  padding: 12px 22px;
-  font-size: 13px;
+  padding: 13px 24px;
+  font-size: 14px;
   font-weight: 600;
   width: auto;
 }
@@ -2920,20 +2961,20 @@ ul {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 12px 22px;
+  padding: 13px 24px;
   border-radius: 10px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   font-family: var(--font-body);
-  background: linear-gradient(135deg, #E8E8EC 0%, #D8D8E0 100%);
-  color: #8B8B9E;
+  background: linear-gradient(180deg, #EDEDF0 0%, #DDDDE3 100%);
+  color: #9494A8;
   border: none;
   transition: all 0.2s ease;
   white-space: nowrap;
 }
 
 .btn--light-gray:hover {
-  background: linear-gradient(135deg, #DDDDE2 0%, #CDCDD8 100%);
+  background: linear-gradient(180deg, #E3E3E8 0%, #D0D0DA 100%);
   color: var(--dark-500);
 }
 

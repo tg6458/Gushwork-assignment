@@ -15,6 +15,41 @@
   <body>
 
     <!-- ============================================
+       STICKY HEADER
+       Appears when scrolling down past first fold,
+       disappears when scrolling back up
+       ============================================ -->
+    <header class="sticky-header" id="stickyHeader">
+      <div class="sticky-header__inner">
+        <div class="sticky-header__left">
+          <a href="#" class="navbar__logo">
+            <div class="logo">
+              <span class="logo__main">MANGALAM</span>
+              <span class="logo__sub">HDPE <span class="logo__divider">|</span> PIPES</span>
+            </div>
+          </a>
+        </div>
+        <div class="sticky-header__right">
+          <a href="#" class="navbar__link">About Us</a>
+          <div class="navbar__dropdown">
+            <button class="navbar__link navbar__link--dropdown">
+              Products
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="navbar__dropdown-menu" role="menu">
+              <a href="#" role="menuitem">HDPE Pipes</a>
+              <a href="#" role="menuitem">HDPE Coils</a>
+              <a href="#" role="menuitem">Fittings</a>
+            </div>
+          </div>
+          <a href="#" class="btn btn--navy btn--sm">Contact Us</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============================================
        MAIN NAVIGATION BAR
        ============================================ -->
     <nav class="navbar" id="navbar">
