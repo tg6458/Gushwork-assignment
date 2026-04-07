@@ -4,7 +4,7 @@
    ============================================ */
 .fold--cta-bar {
   background: var(--white);
-  border-top: 1px solid var(--gray-200);
+  padding: 0 0 var(--py) 0;
 }
 
 .fold--cta-bar .fold__inner {
