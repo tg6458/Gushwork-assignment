@@ -1,0 +1,35 @@
+/* ============================================
+   TRUSTED BY SECTION
+   Static logo grid
+   ============================================ */
+.fold--trusted {
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.fold--trusted .fold__inner {
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+
+.trusted__heading {
+  font-size: 15px;
+  color: var(--gray-400);
+  text-align: center;
+  margin-bottom: 28px;
+  font-weight: 400;
+}
+
+.trusted__logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.trusted__logo {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.85;
+}

@@ -4,7 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mangalam HDPE Pipes - Premium HDPE Pipes & Coils</title>
-    <link rel="stylesheet" href="styles.css" />
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/buttons.css" />
+
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="css/components/navbar.css" />
+    <link rel="stylesheet" href="css/components/hero.css" />
+    <link rel="stylesheet" href="css/components/trusted.css" />
+    <link rel="stylesheet" href="css/components/specs.css" />
+    <link rel="stylesheet" href="css/components/faq.css" />
+    <link rel="stylesheet" href="css/components/features.css" />
+    <link rel="stylesheet" href="css/components/carousel.css" />
+    <link rel="stylesheet" href="css/components/process.css" />
+    <link rel="stylesheet" href="css/components/testimonials.css" />
+    <link rel="stylesheet" href="css/components/portfolio.css" />
+    <link rel="stylesheet" href="css/components/cta-bar.css" />
+    <link rel="stylesheet" href="css/components/resources.css" />
+    <link rel="stylesheet" href="css/components/contact.css" />
+    <link rel="stylesheet" href="css/components/modals.css" />
+    <link rel="stylesheet" href="css/components/footer.css" />
+
+    <!-- Responsive Overrides (must load last) -->
+    <link rel="stylesheet" href="css/responsive.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -55,10 +79,7 @@
     <nav class="navbar" id="navbar">
       <div class="navbar__inner">
         <a href="#" class="navbar__logo">
-          <div class="logo">
-            <span class="logo__main">MANGALAM</span>
-            <span class="logo__sub">HDPE <span class="logo__divider">|</span> PIPES</span>
-          </div>
+          <img src="assets/brand-logo.png" alt="Mangalam HDPE Pipes" class="brand-logo" />
         </a>
         <button class="navbar__hamburger" id="hamburger" aria-label="Toggle navigation menu">
           <span></span><span></span><span></span>
@@ -1038,6 +1059,18 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Component Scripts -->
+    <script src="js/sticky-header.js"></script>
+    <script src="js/image-carousel.js"></script>
+    <script src="js/zoom.js"></script>
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/process-tabs.js"></script>
+    <script src="js/faq-accordion.js"></script>
+    <script src="js/catalogue-form.js"></script>
+    <script src="js/modals.js"></script>
+
+    <!-- Entry Point (must load last) -->
+    <script src="js/main.js"></script>
   </body>
 </html>

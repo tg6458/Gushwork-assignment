@@ -1,0 +1,90 @@
+/* ============================================
+   TECHNICAL SPECIFICATIONS SECTION
+   Dark background with data table
+   ============================================ */
+.fold--specs {
+  background: #0F172A;
+  color: var(--white);
+}
+
+.specs__header {
+  margin-bottom: 40px;
+}
+
+.specs__title {
+  font-family: var(--font-heading);
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--white);
+  margin-bottom: 16px;
+  letter-spacing: -0.3px;
+}
+
+.specs__subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 520px;
+}
+
+/* Table wrapper */
+.specs__table-wrapper {
+  margin-bottom: 40px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Specs table */
+.specs__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.specs__table thead th {
+  text-align: left;
+  padding: 14px 24px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.specs__table tbody td {
+  padding: 14px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+}
+
+.specs__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* First column (parameter names) slightly dimmer */
+.specs__table tbody td:first-child {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  width: 40%;
+}
+
+/* Alternating row background */
+.specs__table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Flag emoji */
+.specs__flag {
+  margin-right: 4px;
+}
+
+/* Download button */
+.specs__cta {
+  display: flex;
+  justify-content: center;
+}

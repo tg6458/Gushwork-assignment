@@ -1,0 +1,246 @@
+/* ============================================
+   HERO / PRODUCT SECTION
+   Two-column product layout with image carousel,
+   certifications, pricing, and actions
+   ============================================ */
+.fold--hero {
+  background: var(--white);
+}
+
+.fold--hero .fold__inner {
+  padding-top: 24px;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ---- Image Carousel ---- */
+.product__gallery {
+  position: relative;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel__main {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--gray-100);
+  aspect-ratio: 4 / 3;
+  cursor: crosshair;
+}
+
+.carousel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Zoom lens overlay */
+.carousel__lens {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.15);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 5;
+}
+
+.carousel__main:hover .carousel__lens {
+  opacity: 1;
+}
+
+/* Zoom preview panel (uses background-image) */
+.carousel__zoom-preview {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 16px);
+  width: 350px;
+  height: 350px;
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--white);
+  background-repeat: no-repeat;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.carousel__zoom-preview--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Carousel arrows */
+.carousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  transition: all 0.2s;
+  z-index: 10;
+}
+
+.carousel__arrow:hover {
+  background: var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.carousel__arrow--prev { left: 12px; }
+.carousel__arrow--next { right: 12px; }
+
+/* Thumbnails */
+.carousel__thumbs {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.carousel__thumb {
+  flex: 1;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  opacity: 0.5;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.carousel__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel__thumb:hover { opacity: 0.8; }
+.carousel__thumb--active { border-color: var(--dark); opacity: 1; }
+
+/* ---- Product Details (Right Column) ---- */
+.product__details {
+  display: flex;
+  flex-direction: column;
+}
+
+.certifications {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.cert {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--dark-600);
+}
+
+.cert__icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.product__title {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--dark);
+  margin-bottom: 20px;
+  letter-spacing: -0.2px;
+}
+
+.product__features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.product__features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.feature-check {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ---- Price Card ---- */
+.price-card {
+  padding: 20px;
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.price-card__label {
+  font-size: 13px;
+  color: var(--gray-400);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.price-card__amount {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+
+.price-card__tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.price-card__certs {
+  font-size: 13px;
+  color: var(--gray-400);
+}
+
+.product__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.product__actions .btn {
+  padding: 12px 24px;
+}

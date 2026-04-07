@@ -1,0 +1,47 @@
+/* ============================================
+   CTA BAR SECTION
+   "Didn't find what you're looking for?"
+   ============================================ */
+.fold--cta-bar {
+  background: var(--white);
+  border-top: 1px solid var(--gray-200);
+}
+
+.fold--cta-bar .fold__inner {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.cta-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 32px;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+}
+
+.cta-bar__title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.cta-bar__link {
+  color: var(--navy);
+  text-decoration: underline;
+}
+
+.cta-bar__desc {
+  font-size: 14px;
+  color: var(--dark-500);
+}
+
+.cta-bar__btn {
+  flex-shrink: 0;
+}

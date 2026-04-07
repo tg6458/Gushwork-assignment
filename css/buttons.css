@@ -1,0 +1,128 @@
+/* ============================================
+   BUTTONS & TAGS
+   All shared button variants and tag styles
+   ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-family: var(--font-body);
+}
+
+.btn--dark {
+  background: var(--dark);
+  color: var(--white);
+}
+
+.btn--dark:hover {
+  background: #1F2937;
+  box-shadow: 0 4px 12px rgba(17, 24, 39, 0.25);
+}
+
+.btn--blue {
+  background: var(--blue-600);
+  color: var(--white);
+}
+
+.btn--blue:hover {
+  background: var(--blue-700);
+}
+
+.btn--outline {
+  background: var(--white);
+  color: var(--dark);
+  border: 1.5px solid var(--gray-200);
+}
+
+.btn--outline:hover {
+  border-color: var(--gray-300);
+  background: var(--gray-50);
+}
+
+.btn--sm {
+  padding: 8px 16px;
+  font-size: 13px;
+}
+
+.btn--pill {
+  border-radius: 100px;
+  padding: 14px 32px;
+  font-size: 15px;
+}
+
+.btn--navy {
+  background: var(--navy);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.btn--navy:hover {
+  background: #162248;
+  box-shadow: 0 4px 12px rgba(30, 42, 94, 0.25);
+}
+
+.btn--outline-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  background: transparent;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn--outline-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn--light-gray {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 13px 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--font-body);
+  background: linear-gradient(180deg, #EDEDF0 0%, #DDDDE3 100%);
+  color: #9494A8;
+  border: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn--light-gray:hover {
+  background: linear-gradient(180deg, #E3E3E8 0%, #D0D0DA 100%);
+  color: var(--dark-500);
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.tag--orange { background: #FEF3C7; color: #92400E; }
+.tag--green { background: #FEF3C7; color: #92400E; }

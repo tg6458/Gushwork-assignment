@@ -128,6 +128,14 @@ ul {
   margin: 0 2px;
 }
 
+/* Brand logo image */
+.brand-logo {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
 /* ============================================
    STICKY HEADER
    Fixed top, slides down when scrolling past first fold,
@@ -2304,13 +2312,8 @@ ul {
     justify-content: center;
   }
 
-  .logo__main {
-    font-size: 16px;
-    letter-spacing: 2px;
-  }
-
-  .logo__sub {
-    font-size: 9px;
+  .brand-logo {
+    height: 28px;
   }
 
   /* Product mobile */

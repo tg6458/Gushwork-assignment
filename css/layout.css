@@ -1,0 +1,22 @@
+/* ============================================
+   FOLD WRAPPER
+   Each section/fold uses consistent padding
+   and centers content at max-width 1240px
+   ============================================ */
+/* Section divider line */
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--gray-200);
+  margin: 0;
+  width: 100%;
+}
+
+.fold {
+  width: 100%;
+}
+
+.fold__inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: var(--py) var(--px);
+}
